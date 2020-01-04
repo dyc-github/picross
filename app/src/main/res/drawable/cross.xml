@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:fillColor="#333333"
+      android:pathData="M5.625,4.2188L4.2188,5.625L10.5938,12L4.2188,18.375L5.625,19.7813L12,13.4063L18.375,19.7813L19.7813,18.375L13.4063,12L19.7813,5.625L18.375,4.2188L12,10.5938L5.625,4.2188z"/>
+</vector>
+
+    <!-- from: https://visualpharm.com/free-icons/delete-595b40b75ba036ed117d7c27-->

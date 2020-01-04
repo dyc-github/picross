@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainView"
+    tools:context=".MainActivity">
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="new game"
+        android:id="@+id/new_button"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reset_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="reset grid"
+        android:id="@+id/reset_button"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/new_button"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show answer"
+        android:id="@+id/show_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameArea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/check_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="check answer"
+        android:id="@+id/check_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameArea"
+        app:layout_constraintStart_toEndOf="@id/show_button"
+        app:layout_constraintEnd_toEndOf="parent"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Picross"
+        android:id="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/new_button"
+        app:layout_constraintBottom_toTopOf="@id/gameArea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/gameArea"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@id/show_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/columnHintsPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/gridPlaceholder"
+            app:layout_constraintEnd_toEndOf="@id/gridPlaceholder"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowHintsPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/gridPlaceholder"
+            app:layout_constraintEnd_toStartOf="@id/gridPlaceholder"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gridPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="0"
+            android:orientation="vertical"
+            android:rowCount="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"></LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+
+    <!--    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridPlaceholder"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>-->
+    <!--Change the layout such that instead of a border
+    around each individual tile have no border and instead
+    have lines that for a grind instead and a general border-->
+
+</android.support.constraint.ConstraintLayout>
